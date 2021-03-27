@@ -1,0 +1,44 @@
+var i; var array=[];
+function myFunction() {
+  for (i=0;i<100;i++){
+  var x=Math.floor((Math.random() * 400) + 1);
+  var y=Math.floor((Math.random() * 400) + 1);
+  var btn = document.createElement("div");
+  var b=(Math.random() * 350);
+  btn.id = "div"+b;
+  document.getElementById("container").appendChild(btn);
+  if (i<=20){
+  btn.style.backgroundColor="blue";
+  }
+  if (i<=50&&i>20){
+  btn.style.backgroundColor="red";
+  }  
+  if (i>50&&i<=70){
+  btn.style.backgroundColor="yellow";
+  }  
+  if (i>70){
+  btn.style.backgroundColor="grey";
+  }  
+  btn.style.borderStyle="solid";
+  btn.style.height="50px";
+  btn.style.width="50px";
+  btn.style.position="absolute";
+  btn.style.top=y+'px';
+  btn.style.left=x+'px';
+  array.push(btn.id);
+  console.log(array);
+  var phoneNode = document.getElementById("div"+b);
+      phoneNode.addEventListener("mouseover", invisible);
+  }
+}
+
+function invisible(event){
+    if (array.length!=1){
+    var myName = event.currentTarget;
+    myName.remove();
+    array.pop();
+    console.log(array);
+}
+    else 
+      alert("Last One!");
+    }
