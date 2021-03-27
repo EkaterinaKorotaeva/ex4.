@@ -4,9 +4,9 @@
     <title></title>
     <meta charset = "utf-8" />
     <script type = "text/javascript"
-            src = "ex4.js">
+            src = "JSpart.js">
     </script>
-    <link rel="stylesheet" href="ex4.css">
+    <link rel="stylesheet" href="CSSpart.css">
   </head>
   <body onload="myFunction()" onload="setTimeout(invisible,100)";>
     <div id="container">
